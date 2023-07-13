@@ -1,0 +1,60 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Jiawei's Cars Search Online</title>
+  <link rel="stylesheet" href="/site.css">
+  <script src="/script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="nav">
+    <a href="/favouritelist">Favourite List</a>
+    <a href="/">Home</a>
+    <a href="/stat">Summary Statistics</a>
+  </div>
+
+  <h1>Search Results</h1>
+
+  <div>
+{{#if cars}}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Country</th>
+          <th>Price</th>
+          <th>Odometer</th>
+          <th>Favourite</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each cars}}
+        <tr class="vehicle-result">
+          <td>{{this.id}}</td>
+          <td>{{this.carMake}}</td>
+          <td>{{this.carModel}}</td>
+          <td>{{this.carYear}}</td>
+          <td>{{this.country}}</td>
+          <td>{{this.price}}</td>
+          <td>{{this.odometer}}</td>
+          <td><button data-id="{{this.id}}" class="add-to-favorites">Add to Favourite List</button></td>
+        </tr>
+        {{/each}}
+
+
+      </tbody>
+    </table>
+{{/if}}
+
+{{#unless cars}}
+<p>Please enter an valid value</p>
+<a href="/">Back to Home</a>
+{{/unless}}
+
+  </div>
+
+</body>

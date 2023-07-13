@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jiawei's Cars Search Online</title>
+  <link rel="stylesheet" href="/site.css">
+  <script src="/script.js"></script>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="/favouritelist">Favourite List</a>
+    <a href="/">Home</a>
+    <a href="/stat">Summary Statistics</a>
+  </div>
+
+  <div class="container">
+    <h1>220 Cars Search</h1>
+
+    <h2>Get Car ID Search</h2>
+    <form action="/cars/id" method="GET">
+      <label for="id">Car's ID</label>
+      <input type="number" id="id" name="id"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+    <h2>Get Car Make Search</h2>
+    <form action="./cars/carmake" method="GET">
+      <label for="carMake">Car's Make</label>
+      <input type="text" id="carMake" name="carMake"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+    <h2>Get Car Model Search</h2>
+    <form action="./cars/carmodel" method="GET">
+      <label for="carModel">Car's Model</label>
+      <input type="text" id="carModel" name="carModel"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+
+    <h2>Get Car Year Range Search</h2>
+    <form action="./cars/caryear" method="GET">
+      <label for="lowerYear">From earlier year(from 1981): </label>
+      <input type="number" id="lowerYear" name="lower"> <br>
+      <label for="laterYear">From later year(from 2013): </label>
+      <input type="number" id="upperYear" name="upper"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+    <h2>Get Car Country Search</h2>
+    <form action="./cars/country" method="GET">
+      <label for="country">Car's Country</label>
+      <input type="text" id="country" name="country"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+    <h2>Get Car Price Range Search</h2>
+    <form action="./cars/price" method="GET">
+      <label for="lowerPrice">From lower price: </label>
+      <input type="number" id="lowerPrice" name="lowerPrice"> <br>
+      <label for="higherPrice">From higher price: </label>
+      <input type="number" id="higherPrice" name="higherPrice"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+    <h2>Get Car Odometer Range Search</h2>
+    <form action="./cars/odometer" method="GET">
+      <label for="lowerOdometer">From lower odometer: </label>
+      <input type="number" id="lowerOdometer" name="lowerOdometer"> <br>
+      <label for="higherOdometer">From higher odometer: </label>
+      <input type="number" id="higherOdometer" name="higherOdometer"> <br>
+      <input type="submit" value="Sumbit"> <br>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
